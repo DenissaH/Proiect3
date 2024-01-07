@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Proiect3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Proiect3"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+        Title="Welcome"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+        <ShellContent 
+        Title="About" 
+        ContentTemplate="{DataTemplate local:AboutPage}" 
+        />
+        <ShellContent 
+            Title="Elevi List" 
+            ContentTemplate="{DataTemplate local:ListEntryPage}" 
+             />
+        <ShellContent
+            Title="Materii"
+            ContentTemplate="{DataTemplate local:ListMateriiPage}"
+            />
+        <ShellContent
+            Title="Profesori"
+            ContentTemplate="{DataTemplate local:ListProfesorPage}"
+            />
+        <ShellContent
+            Title="Absente"
+            ContentTemplate="{DataTemplate local:ListAbsentePage}"
+            />  
+    </TabBar>
+</Shell>

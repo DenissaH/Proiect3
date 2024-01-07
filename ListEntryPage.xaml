@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect3.ListEntryPage"
+             Title="ListEntryPage">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga Elevi" 
+        Clicked="OnEleviListAddedClicked" />
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+        <VerticalStackLayout>
+
+            <ListView x:Name="listView" 
+            Margin="20" 
+            ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Nume}" 
+                        Detail="{Binding Prenume}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </StackLayout>
+
+</ContentPage>
